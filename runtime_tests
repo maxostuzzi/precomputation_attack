@@ -1,0 +1,25 @@
+import timeit
+
+
+@parallel
+def precomputation_test(s, t):
+	start = timeit.default_timer()
+	ends = dict()
+	for i in range(s):
+		rw = rw_endpoint_endideal(t)
+		ends[rw[0]] = rw[1]
+	end = timeit.default_timer()
+	return end - start
+
+
+@parallel		
+def online_test(D, s, t):
+	start = timeit.default_timer()	
+	private_key = private()
+	public_key = action(0,private_key)
+	result = detect_collision(D, public_key, t)
+	end = timeit.default_timer()
+	if result == 'Unsuccessful':
+		return [end - start, 0]
+	else:
+		return [end - start, 1]
