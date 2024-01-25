@@ -1,0 +1,1 @@
+These three sage scripts are meant to be used one after the other, since the precomputation one calls functions defined in the settings one and the online one calls functions defined in the online one.
