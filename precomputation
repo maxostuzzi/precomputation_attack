@@ -1,4 +1,5 @@
 #to add randomness
+
 import random as rn
 
 a = rn.randint(1,p)
@@ -6,7 +7,8 @@ b = rn.randint(1,p)
 def hashp(A, max_exp, length):
     return (A * a + b) % p
 
-#the hash function needed for the recursion
+#the hashfunction needed for the recursion
+
 def hashfunc(A, max_exp, length):
     digits = [ ]
     B = hashp(A,max_exp, length)
@@ -18,10 +20,12 @@ def hashfunc(A, max_exp, length):
     return new_vec
 
 #needed for adding and subtracting vectors
+
 from operator import sub
 from operator import add
 
 #returns the endpoint of a t long pseudorandom walk
+
 def rw_endpoint_endideal(t):
 	endpoint = 0
 	endideal =	private()					#initialize to 0
@@ -34,6 +38,7 @@ def rw_endpoint_endideal(t):
 	return [endpoint, endideal]
 
 #returns a dictionary in which the keys are the s endpoints in the graphs of t long pseudorandom walks and the values are the vectors whose action takes you there starting from the point 0
+
 def rw_ends_dict(s, t):
 	ends = dict()
 	for i in range(s):
