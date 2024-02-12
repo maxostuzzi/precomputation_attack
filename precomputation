@@ -1,4 +1,4 @@
-#to add randomness
+#to blow up the montgomery coefficients
 
 import random as rn
 
@@ -7,7 +7,7 @@ b = rn.randint(1,p)
 def hashp(A, max_exp, length):
     return (A * a + b) % p
 
-#the hashfunction needed for the recursion
+#the pseudorandom function needed for the recursion
 
 def hashfunc(A, max_exp, length):
     digits = [ ]
@@ -30,7 +30,7 @@ def rw_endpoint_endideal(t):
 	endpoint = 0
 	endideal =	private()					#initialize to 0
 	rand_exp = endideal
-	for i in range(ceil(t / 2)):
+	for i in range(t):
 		if i > 0:
 			endideal = list( map(add, endideal, rand_exp))
 		endpoint = action(endpoint, rand_exp)
