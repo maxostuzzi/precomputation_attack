@@ -11,7 +11,7 @@ def detect_collision(dict_ends, pub, t):
 	hint_ideal = private()
 	rand_ideal = hint_ideal
 	k = 0                    #counter
-	while boolean == False and k < t:
+	while boolean == False and k < 2*t:
 		if k > 0:
 			hint_ideal = list(map(add, hint_ideal, rand_ideal))
 		mont = action(mont, rand_ideal)
