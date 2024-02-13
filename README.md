@@ -1,5 +1,5 @@
-This is the code for the key recovery attack described in the paper ....
+This is the code for the key recovery attack described in ....
 
-The code in setting.sage is taken from ..., while the rest of the code is original.
+The code in setting.sage is taken from https://github.com/ioerror/csidh-reference-implementation/blob/master/supersingular.sage, while the rest of the code is original.
 
 These three sage scripts (one for the settings, two for the attack) are meant to be used one after the other, since precomputation.sage call functions defined in settings.sage ones and online.sage call functions defined in precomputation.sage.
