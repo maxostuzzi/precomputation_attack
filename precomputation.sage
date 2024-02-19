@@ -1,4 +1,4 @@
-#to blow up the montgomery coefficients
+#to distribute the montgomery coefficients in F_p
 
 import random as rn
 
@@ -7,7 +7,7 @@ b = rn.randint(1,p)
 def hashp(A, max_exp, length):
     return (A * a + b) % p
 
-#the pseudorandom function needed for the recursion
+#the 'pseudorandom function' needed for the recursion
 
 def hashfunc(A, max_exp, length):
     digits = [ ]
@@ -19,7 +19,7 @@ def hashfunc(A, max_exp, length):
     new_vec = [((digits[i] + digits[i + length]) % (int(2 * max_exp + 1))) - max_exp for i in range(length)]
     return new_vec
 
-#needed for adding and subtracting vectors
+#for adding and subtracting vectors
 
 from operator import sub
 from operator import add
